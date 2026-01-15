@@ -220,7 +220,7 @@ export function Hero() {
             <img
               src="/kucuksucuk.jpg"
               alt="Ayse Su Uslu portrait"
-              className="w-full h-full object-cover object-top"
+              className="w-full h-full object-cover object-[55%_35%]"
             />
           </div>
         </motion.div>
