@@ -12,7 +12,7 @@ export function AboutMe() {
     { src: '/image1.png', alt: 'Portfolio photo 2' },
     { src: '/image2.jpg', alt: 'Portfolio photo 3' },
     { src: '/image3.png', alt: 'Portfolio photo 4' },
-    { src: '/kucuksucuk.jpg', alt: 'Portrait photo' }
+    { src: '/kucuksucuk.jpg', alt: 'Portfolio photo 5' }
   ];
 
   const { scrollYProgress } = useScroll({
@@ -359,7 +359,7 @@ export function AboutMe() {
                     key={galleryImages[galleryIndex].src}
                     src={galleryImages[galleryIndex].src}
                     alt={galleryImages[galleryIndex].alt}
-                    className="h-[380px] w-full object-cover object-[55%_35%]"
+                    className="h-[380px] w-full object-cover"
                     initial={{ opacity: 0, scale: 1.02 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.6, ease: "easeOut" }}
