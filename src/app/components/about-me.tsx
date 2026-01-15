@@ -226,6 +226,81 @@ export function AboutMe() {
 
               <motion.div
                 variants={itemVariants}
+                className="mt-10"
+              >
+                <h3 className="text-3xl md:text-4xl text-white mb-6" style={{ fontWeight: 700 }}>
+                  Experience
+                </h3>
+                <div className="space-y-6">
+                  {[
+                    {
+                      title: 'Information Technologies Intern — Social Office',
+                      period: 'Aug 2025 – Sep 2025',
+                      details: [
+                        'Built data-oriented tasks with Python and Excel.',
+                        'Designed an interactive Excel dashboard and a Python CLI tool.',
+                        'Prepared technical design outputs using AutoCAD and Photoshop.'
+                      ]
+                    },
+                    {
+                      title: 'Vice President — GDG on Campus Maltepe',
+                      period: '2025 – Present',
+                      details: [
+                        'Managed community events end-to-end and post-event evaluation.',
+                        'Led social media, organization, and education teams.'
+                      ]
+                    },
+                    {
+                      title: 'Core Team Member — Anka Software Club',
+                      period: '2024 – 2025',
+                      details: [
+                        'Designed social media visuals and supported the club’s Instagram.',
+                        'Helped coordinate the AI & Technology Summit.'
+                      ]
+                    },
+                    {
+                      title: 'Architectural & Engineering Intern — Arch Of Sigma',
+                      period: 'Nov 2025 – Dec 2025',
+                      details: [
+                        'Produced room models in SketchUp and 2D/3D designs in Rhinoceros 3D.',
+                        'Supported project management and product development tasks.'
+                      ]
+                    },
+                    {
+                      title: 'Student Assistant — Maltepe University',
+                      period: 'Starting 2026',
+                      details: [
+                        'Assist with course preparation, documentation, and coordination.'
+                      ]
+                    }
+                  ].map((item, index) => (
+                    <motion.div
+                      key={index}
+                      variants={itemVariants}
+                      className="rounded-2xl border border-accent-2/20 bg-black/40 backdrop-blur-sm p-6"
+                    >
+                      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-3">
+                        <h4 className="text-xl md:text-2xl text-white" style={{ fontWeight: 600 }}>
+                          {item.title}
+                        </h4>
+                        <span className="text-sm md:text-base text-gray-400">
+                          {item.period}
+                        </span>
+                      </div>
+                      <ul className="text-gray-300 space-y-2">
+                        {item.details.map((detail, detailIndex) => (
+                          <li key={detailIndex} className="leading-relaxed">
+                            {detail}
+                          </li>
+                        ))}
+                      </ul>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+
+              <motion.div
+                variants={itemVariants}
                 className="mt-10 flex flex-wrap items-center justify-center gap-4"
               >
                 <a

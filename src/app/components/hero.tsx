@@ -1,6 +1,5 @@
 import { motion } from 'motion/react';
 import { useEffect, useState } from 'react';
-import { User } from 'lucide-react';
 
 export function Hero() {
   const [particles, setParticles] = useState<Array<{ id: number; x: number; y: number; delay: number; size: number }>>([]);
@@ -218,9 +217,11 @@ export function Hero() {
           
           {/* Photo container */}
           <div className="relative w-56 h-56 rounded-full overflow-hidden border-4 border-accent-2/50 shadow-2xl">
-            <div className="w-full h-full bg-gradient-to-br from-accent-2/30 to-accent-3/30 backdrop-blur-sm flex items-center justify-center">
-              <User size={80} className="text-accent-3" strokeWidth={1.5} />
-            </div>
+            <img
+              src="/image.png"
+              alt="Ayse Su Uslu portrait"
+              className="w-full h-full object-cover"
+            />
           </div>
         </motion.div>
 
