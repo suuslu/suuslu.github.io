@@ -218,9 +218,9 @@ export function Hero() {
           {/* Photo container */}
           <div className="relative w-56 h-56 rounded-full overflow-hidden border-4 border-accent-2/50 shadow-2xl">
             <img
-              src="/kucuksucuk.jpg"
+              src="/image.png"
               alt="Ayse Su Uslu portrait"
-              className="w-full h-full object-cover object-[55%_35%]"
+              className="w-full h-full object-cover"
             />
           </div>
         </motion.div>
