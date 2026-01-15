@@ -31,22 +31,22 @@ export function Contact() {
     {
       name: 'Email',
       icon: Mail,
-      href: 'mailto:contact@example.com',
-      label: 'contact@example.com',
+      href: 'mailto:aysesu.uslu@gmail.com',
+      label: 'aysesu.uslu@gmail.com',
       color: '#8F5BBD'
     },
     {
       name: 'GitHub',
       icon: Github,
-      href: 'https://github.com',
-      label: 'github.com/username',
+      href: 'https://github.com/suuslu',
+      label: 'github.com/suuslu',
       color: '#A78BFA'
     },
     {
       name: 'LinkedIn',
       icon: Linkedin,
-      href: 'https://linkedin.com',
-      label: 'linkedin.com/in/username',
+      href: 'https://www.linkedin.com/in/ayse-su-uslu/',
+      label: 'linkedin.com/in/ayse-su-uslu',
       color: '#4B0082'
     }
   ];

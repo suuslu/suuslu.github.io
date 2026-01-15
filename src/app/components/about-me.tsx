@@ -205,9 +205,10 @@ export function AboutMe() {
                 className="text-xl md:text-2xl text-gray-300 leading-relaxed mb-8"
                 style={{ lineHeight: '1.8' }}
               >
-                I'm a <span className="text-accent-3 font-semibold">Software Engineering student</span> passionate 
-                about building clean, efficient, and user-focused digital experiences. I enjoy learning modern 
-                technologies, experimenting with new tools, and turning ideas into functional interfaces.
+                I am a <span className="text-accent-3 font-semibold">3rd-year Software Engineering student</span> at 
+                Maltepe University with a current GPA of <span className="text-accent-3 font-semibold">3.06</span>, 
+                expected to graduate in <span className="text-accent-3 font-semibold">June 2027</span>. I am an 
+                aspiring data analyst who enjoys working with data and building clean, structured systems.
               </motion.p>
 
               <motion.p 
@@ -215,10 +216,38 @@ export function AboutMe() {
                 className="text-xl md:text-2xl text-gray-300 leading-relaxed"
                 style={{ lineHeight: '1.8' }}
               >
-                I'm currently exploring <span className="text-accent-2 font-semibold">frontend development</span>, 
-                backend APIs, and UI/UX design while continuously improving my problem-solving and technical 
-                thinking skills.
+                My interests focus on <span className="text-accent-2 font-semibold">data modeling</span>, 
+                <span className="text-accent-2 font-semibold"> analytics</span>, and reliable database design. 
+                I work with <span className="text-accent-2 font-semibold">PostgreSQL</span> and have hands-on 
+                experience using <span className="text-accent-2 font-semibold">XAMPP</span>, 
+                <span className="text-accent-2 font-semibold"> phpMyAdmin</span>, and 
+                <span className="text-accent-2 font-semibold"> pgAdmin 4</span> in previous projects.
               </motion.p>
+
+              <motion.div
+                variants={itemVariants}
+                className="mt-10 flex flex-wrap items-center justify-center gap-4"
+              >
+                <a
+                  href="/cv.pdf"
+                  className="group relative px-7 py-3 rounded-xl bg-accent text-white transition-all duration-300 hover:scale-105"
+                  style={{ fontWeight: 600 }}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="relative z-10">Download CV</span>
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl bg-accent-2/50" />
+                </a>
+                <a
+                  href="https://drive.google.com/drive/folders/1KAa9J34nTpt-0PbesXKkqW1ryC1auri7"
+                  className="px-7 py-3 rounded-xl border-2 border-accent-2 text-accent-3 transition-all duration-300 hover:bg-accent-2/10 hover:border-accent-3 hover:scale-105"
+                  style={{ fontWeight: 600 }}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  My Portfolio
+                </a>
+              </motion.div>
 
               {/* Icon badges */}
               <motion.div 
