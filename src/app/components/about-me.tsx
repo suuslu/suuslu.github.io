@@ -8,6 +8,7 @@ export function AboutMe() {
   const [galleryIndex, setGalleryIndex] = useState(0);
 
   const galleryImages = [
+    { src: '/kucuksucuk.jpg', alt: 'Portrait photo' },
     { src: '/image0.png', alt: 'Portfolio photo 1' },
     { src: '/image1.png', alt: 'Portfolio photo 2' },
     { src: '/image2.jpg', alt: 'Portfolio photo 3' },
@@ -358,7 +359,7 @@ export function AboutMe() {
                     key={galleryImages[galleryIndex].src}
                     src={galleryImages[galleryIndex].src}
                     alt={galleryImages[galleryIndex].alt}
-                    className="h-[380px] w-full object-cover"
+                    className="h-[380px] w-full object-cover object-top"
                     initial={{ opacity: 0, scale: 1.02 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.6, ease: "easeOut" }}
