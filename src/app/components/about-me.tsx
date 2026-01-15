@@ -4,7 +4,6 @@ import { Sparkles, Code2, Heart, Lightbulb, ChevronLeft, ChevronRight } from 'lu
 
 export function AboutMe() {
   const sectionRef = useRef<HTMLElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
   const [particles, setParticles] = useState<Array<{ id: number; x: number; y: number; delay: number; size: number }>>([]);
   const [galleryIndex, setGalleryIndex] = useState(0);
 
@@ -24,19 +23,6 @@ export function AboutMe() {
   const opacity = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [0, 1, 1, 0]);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.2 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
     // Generate floating particles
     const particleArray = Array.from({ length: 30 }, (_, i) => ({
       id: i,
@@ -47,11 +33,6 @@ export function AboutMe() {
     }));
     setParticles(particleArray);
 
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
   }, []);
 
   useEffect(() => {
@@ -144,7 +125,7 @@ export function AboutMe() {
         <motion.div
           variants={containerVariants}
           initial="hidden"
-          animate={isVisible ? "visible" : "hidden"}
+          animate="visible"
         >
           {/* Header with sparkles */}
           <motion.div 
