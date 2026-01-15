@@ -91,7 +91,7 @@ export function AboutMe() {
     <section 
       ref={sectionRef} 
       id="about" 
-      className="relative min-h-screen bg-black py-32 px-6 flex items-center overflow-hidden"
+      className="relative min-h-screen bg-black py-32 px-6 overflow-hidden"
     >
       {/* Drifting background glow */}
       <motion.div 
