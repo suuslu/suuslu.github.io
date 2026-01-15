@@ -360,6 +360,12 @@ export function AboutMe() {
                     src={galleryImages[galleryIndex].src}
                     alt={galleryImages[galleryIndex].alt}
                     className="h-[380px] w-full object-cover"
+                    style={{
+                      objectPosition:
+                        galleryImages[galleryIndex].src === '/kucuksucuk.jpg'
+                          ? '50% 20%'
+                          : '50% 50%'
+                    }}
                     initial={{ opacity: 0, scale: 1.02 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.6, ease: "easeOut" }}
