@@ -363,7 +363,7 @@ export function AboutMe() {
                     style={{
                       objectPosition:
                         galleryImages[galleryIndex].src === '/kucuksucuk.jpg'
-                          ? '50% 20%'
+                          ? '50% 30%'
                           : '50% 50%'
                     }}
                     initial={{ opacity: 0, scale: 1.02 }}
