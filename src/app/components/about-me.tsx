@@ -1,11 +1,19 @@
 import { motion, useScroll, useTransform } from 'motion/react';
 import { useEffect, useRef, useState } from 'react';
-import { Sparkles, Code2, Heart, Lightbulb } from 'lucide-react';
+import { Sparkles, Code2, Heart, Lightbulb, ChevronLeft, ChevronRight } from 'lucide-react';
 
 export function AboutMe() {
   const sectionRef = useRef<HTMLElement>(null);
   const [isVisible, setIsVisible] = useState(false);
   const [particles, setParticles] = useState<Array<{ id: number; x: number; y: number; delay: number; size: number }>>([]);
+  const [galleryIndex, setGalleryIndex] = useState(0);
+
+  const galleryImages = [
+    { src: '/image0.png', alt: 'Portfolio photo 1' },
+    { src: '/image1.png', alt: 'Portfolio photo 2' },
+    { src: '/image2.jpg', alt: 'Portfolio photo 3' },
+    { src: '/image3.png', alt: 'Portfolio photo 4' }
+  ];
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -45,6 +53,14 @@ export function AboutMe() {
       }
     };
   }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setGalleryIndex((prev) => (prev + 1) % galleryImages.length);
+    }, 4500);
+
+    return () => clearInterval(interval);
+  }, [galleryImages.length]);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -322,6 +338,52 @@ export function AboutMe() {
                 >
                   My Portfolio
                 </a>
+              </motion.div>
+
+              <motion.div
+                variants={itemVariants}
+                className="mt-12"
+              >
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className="text-3xl md:text-4xl text-white" style={{ fontWeight: 700 }}>
+                    Photo Gallery
+                  </h3>
+                  <div className="flex items-center gap-2">
+                    <button
+                      type="button"
+                      className="h-10 w-10 rounded-full border border-accent-2/40 text-accent-3 transition-all hover:bg-accent-2/10 hover:border-accent-3"
+                      onClick={() =>
+                        setGalleryIndex((prev) => (prev - 1 + galleryImages.length) % galleryImages.length)
+                      }
+                      aria-label="Previous photo"
+                    >
+                      <ChevronLeft className="mx-auto" size={20} />
+                    </button>
+                    <button
+                      type="button"
+                      className="h-10 w-10 rounded-full border border-accent-2/40 text-accent-3 transition-all hover:bg-accent-2/10 hover:border-accent-3"
+                      onClick={() =>
+                        setGalleryIndex((prev) => (prev + 1) % galleryImages.length)
+                      }
+                      aria-label="Next photo"
+                    >
+                      <ChevronRight className="mx-auto" size={20} />
+                    </button>
+                  </div>
+                </div>
+
+                <div className="relative overflow-hidden rounded-3xl border border-accent-2/20 bg-black/40 backdrop-blur-sm">
+                  <motion.img
+                    key={galleryImages[galleryIndex].src}
+                    src={galleryImages[galleryIndex].src}
+                    alt={galleryImages[galleryIndex].alt}
+                    className="h-[380px] w-full object-cover"
+                    initial={{ opacity: 0, scale: 1.02 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.6, ease: "easeOut" }}
+                  />
+                  <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                </div>
               </motion.div>
 
               {/* Icon badges */}
