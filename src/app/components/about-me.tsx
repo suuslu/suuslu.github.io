@@ -266,7 +266,7 @@ export function AboutMe() {
                     },
                     {
                       title: 'Student Assistant — Maltepe University',
-                      period: 'Starting 2026',
+                      period: 'Jan 2026 – Present',
                       details: [
                         'Assist with course preparation, documentation, and coordination.'
                       ]
