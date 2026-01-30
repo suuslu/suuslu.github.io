@@ -204,7 +204,7 @@ export function AboutMe() {
                 style={{ lineHeight: '1.8' }}
               >
                 I am a <span className="text-accent-3 font-semibold">3rd-year Software Engineering student</span> at 
-                Maltepe University with a current GPA of <span className="text-accent-3 font-semibold">3.06</span>, 
+                Maltepe University with a current GPA of <span className="text-accent-3 font-semibold">3.17</span>, 
                 expected to graduate in <span className="text-accent-3 font-semibold">June 2027</span>. I am an 
                 aspiring data analyst who enjoys working with data and building clean, structured systems.
               </motion.p>
