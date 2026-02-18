@@ -12,7 +12,8 @@ export function AboutMe() {
     { src: '/image1.png', alt: 'Portfolio photo 2' },
     { src: '/image2.jpg', alt: 'Portfolio photo 3' },
     { src: '/image3.png', alt: 'Portfolio photo 4' },
-    { src: '/kucuksucuk.jpg', alt: 'Portfolio photo 5' }
+    { src: '/image4.JPG', alt: 'Portfolio photo 5' },
+    { src: '/kucuksucuk.jpg', alt: 'Portfolio photo 6' }
   ];
 
   const { scrollYProgress } = useScroll({
@@ -301,8 +302,8 @@ export function AboutMe() {
                 variants={itemVariants}
                 className="mt-10 flex flex-wrap items-center justify-center gap-4"
               >
-                <a
-                  href="/cv.pdf"
+                <a 
+                  href="/aysesuuslucv2026new.pdf" 
                   className="group relative px-7 py-3 rounded-xl bg-accent text-white transition-all duration-300 hover:scale-105"
                   style={{ fontWeight: 600 }}
                   target="_blank"
@@ -360,12 +361,14 @@ export function AboutMe() {
                     src={galleryImages[galleryIndex].src}
                     alt={galleryImages[galleryIndex].alt}
                     className="h-[380px] w-full object-cover"
-                    style={{
-                      objectPosition:
-                        galleryImages[galleryIndex].src === '/kucuksucuk.jpg'
-                          ? '50% 35%'
-                          : '50% 50%'
-                    }}
+                      style={{
+                        objectPosition:
+                          galleryImages[galleryIndex].src === '/image4.JPG'
+                            ? '50% 20%'
+                            : galleryImages[galleryIndex].src === '/kucuksucuk.jpg'
+                              ? '50% 35%'
+                              : '50% 50%'
+                      }}
                     initial={{ opacity: 0, scale: 1.02 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.6, ease: "easeOut" }}
