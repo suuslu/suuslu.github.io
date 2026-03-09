@@ -302,16 +302,6 @@ export function AboutMe() {
                 variants={itemVariants}
                 className="mt-10 flex flex-wrap items-center justify-center gap-4"
               >
-                <a 
-                  href="/aysesuuslucv2026new.pdf" 
-                  className="group relative px-7 py-3 rounded-xl bg-accent text-white transition-all duration-300 hover:scale-105"
-                  style={{ fontWeight: 600 }}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span className="relative z-10">Download CV</span>
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl bg-accent-2/50" />
-                </a>
                 <a
                   href="https://drive.google.com/drive/folders/1KAa9J34nTpt-0PbesXKkqW1ryC1auri7"
                   className="px-7 py-3 rounded-xl border-2 border-accent-2 text-accent-3 transition-all duration-300 hover:bg-accent-2/10 hover:border-accent-3 hover:scale-105"
