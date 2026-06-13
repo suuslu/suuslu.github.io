@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from 'motion/react';
 import { useEffect, useRef, useState } from 'react';
-import { Sparkles, Code2, Heart, Lightbulb, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Sparkles, ChevronLeft, ChevronRight } from 'lucide-react';
 
 export function AboutMe() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -243,7 +243,7 @@ export function AboutMe() {
                     },
                     {
                       title: 'Vice President — GDG on Campus Maltepe',
-                      period: '2025 – Present',
+                      period: '2025 – Jun 2026',
                       details: [
                         'Managed community events end-to-end and post-event evaluation.',
                         'Led social media, organization, and education teams.'
@@ -267,7 +267,7 @@ export function AboutMe() {
                     },
                     {
                       title: 'Student Assistant — Maltepe University',
-                      period: 'Jan 2026 – Present',
+                      period: 'Jan 2026 – Jun 2026',
                       details: [
                         'Assist with course preparation, documentation, and coordination.'
                       ]
@@ -365,43 +365,6 @@ export function AboutMe() {
                   />
                   <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/50 via-transparent to-transparent" />
                 </div>
-              </motion.div>
-
-              {/* Icon badges */}
-              <motion.div 
-                variants={containerVariants}
-                className="flex flex-wrap gap-4 mt-12 justify-center"
-              >
-                {[
-                  { icon: Code2, label: 'Clean Code', color: '#A78BFA' },
-                  { icon: Lightbulb, label: 'Creative Solutions', color: '#8F5BBD' },
-                  { icon: Heart, label: 'User-Focused', color: '#4B0082' }
-                ].map((item, index) => {
-                  const Icon = item.icon;
-                  return (
-                    <motion.div
-                      key={index}
-                      variants={itemVariants}
-                      className="flex items-center gap-3 px-6 py-3 rounded-2xl backdrop-blur-sm border border-accent-2/30"
-                      style={{
-                        background: `linear-gradient(135deg, ${item.color}10, ${item.color}05)`
-                      }}
-                      whileHover={{ 
-                        scale: 1.05,
-                        y: -5,
-                        boxShadow: `0 10px 30px ${item.color}40`
-                      }}
-                    >
-                      <motion.div
-                        whileHover={{ rotate: [0, -10, 10, 0] }}
-                        transition={{ duration: 0.5 }}
-                      >
-                        <Icon size={24} style={{ color: item.color }} strokeWidth={2} />
-                      </motion.div>
-                      <span className="text-gray-300 font-medium">{item.label}</span>
-                    </motion.div>
-                  );
-                })}
               </motion.div>
             </div>
 
